@@ -21,27 +21,23 @@ class QuadraticEquationTestCase(unittest.TestCase):
 
     def test_good_password(self):
         password = 'Nizova1987@_'
-        self.assertEqual(get_password_strength(password, self.customer_name, self.company), 10)
+        self.assertEqual(get_password_strength(password), 10)
 
-    def test_password_like_name(self):
-        password = 'ira'
-        self.assertEqual(get_password_strength(password, self.customer_name, self.company), 4)
-
-    def test_password_like_company(self):
-        password = 'lin'
-        self.assertEqual(get_password_strength(password, self.customer_name, self.company), 4)
+    def test_simple_password(self):
+        password = 'lili'
+        self.assertEqual(get_password_strength(password), 4)
 
     def test_password_like_date(self):
         password = '11.11.1987'
-        self.assertEqual(get_password_strength(password, self.customer_name, self.company), 5)
+        self.assertEqual(get_password_strength(password), 6)
 
     def test_digit_password(self):
         password = '12345'
-        self.assertEqual(get_password_strength(password, self.customer_name, self.company), 5)
+        self.assertEqual(get_password_strength(password), 5)
 
     def test_common_password(self):
         password = '121212'
-        self.assertEqual(get_password_strength(password, self.customer_name, self.company), 5)
+        self.assertEqual(get_password_strength(password), 6)
 
 if __name__ == '__main__':
     unittest.main()
