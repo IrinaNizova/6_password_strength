@@ -6,7 +6,9 @@
 from password_strength import get_password_strength
 
 # Example
-```get_password_strength('Alisher52044_')```
+```get_password_strength('Nizova1987@_')```
+
+Output will be 10
 
 # Project Goals
 
