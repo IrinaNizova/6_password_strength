@@ -1,6 +1,6 @@
 # Password Strength Calculator
 
--This script calculates password complexy from 1 to 10
+This script calculates password complexy from 1 to 10. The length of the password is checked, the presence of lowercase and uppercase letters, special symbols of repeated symbols, dates and telephones, absence in the blacklist, which exists in file blacklist
 
 # How to import function
 from password_strength import get_password_strength
