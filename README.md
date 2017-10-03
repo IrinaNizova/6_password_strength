@@ -2,11 +2,11 @@
 
 -This script calculates password complexy from 1 to 10
 
-import function:
+# How to import function
 from password_strength import get_password_strength
 
--Execute with parameters password, name, company
--Example: get_password_strength('Alisher52044_', 'ira', 'linux')
+# Example
+```get_password_strength('Alisher52044_')```
 
 # Project Goals
 

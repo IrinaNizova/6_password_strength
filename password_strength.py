@@ -35,8 +35,8 @@ def is_special_symbols(password):
 
 
 def not_in_blacklist(password):
-    with open("blacklist") as file:
-        blacklist = [row.strip() for row in file]
+    with open("blacklist") as blacklist_file:
+        blacklist = [row.strip() for row in blacklist_file]
     return not bool([b for b in blacklist if password in b])
 
 
@@ -50,6 +50,7 @@ def not_repeat_symbols(password):
 def not_date_in_password(password):
     date_in_pwd = re.match('([0-3]?\d)[/.-]([0-1]?\d)[/.-](\d{2,4})', password)
     return not bool(date_in_pwd)
+
 
 def not_phone_in_password(password):
     phone_in_pwd = re.match('(\d{3}[-\.\s]??\d{3}[-\.\s]??\d{4}|\(\d{3}\)\s*\d{3}[-\.\s]??\d{4}|\d{3}[-\.\s]??\d{4})',
