@@ -60,11 +60,11 @@ def not_phone_in_password(password):
 
 if __name__ == '__main__':
     password = getpass.getpass('input password: ')
-    password_complexy = get_password_strength(password)
-    print('Password complexy is {}'.format(password_complexy))
-    if password_complexy <= 5:
+    password_complexity = get_password_strength(password)
+    print('Password complexity is {}'.format(password_complexity))
+    if password_complexity <= 5:
         print('You password is very simple')
-    elif password_complexy <= 8:
+    elif password_complexity <= 8:
         print('You password is medium')
     else:
-        print('You password is complexy')
+        print('You password is complexity')
